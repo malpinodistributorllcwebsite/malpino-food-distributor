@@ -46,17 +46,32 @@ button {
   gap: 20px;
 }
 
-.brand h1 {
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.logo {
+  height: 58px;
+  width: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.brand-text h1 {
   font-size: 1.7rem;
   color: #0b2f77;
   font-weight: 800;
+  line-height: 1.1;
 }
 
-.brand p {
+.brand-text p {
   font-size: 0.8rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #2563eb;
+  margin-top: 4px;
 }
 
 .nav {
@@ -529,6 +544,14 @@ button {
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .brand {
+    align-items: center;
+  }
+
+  .logo {
+    height: 48px;
   }
 
   .slider-controls {
