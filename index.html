@@ -27,44 +27,115 @@
     </div>
   </header>
 
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <div class="eyebrow">Wholesale produce distribution for the NY / NJ area</div>
-        <h2>Fresh Produce. Dependable Service. Professional Distribution.</h2>
-        <p>
-          Malpino Food Distributor supplies fresh fruits and vegetables to businesses
-          across New York and New Jersey with a focus on quality, consistency, and
-          responsive service.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-light">Contact Us</a>
-          <a href="#products" class="btn btn-outline">View Products</a>
-        </div>
-      </div>
-
-      <div class="hero-cards">
-        <div class="card white-card">
-          <h3>Core Categories</h3>
-          <div class="category-grid">
-            <div>Fruit</div>
-            <div>Vegetables</div>
-            <div>Seasonal Produce</div>
-            <div>Bulk Orders</div>
-            <div>Wholesale Supply</div>
-            <div>Custom Fulfillment</div>
+  <section class="hero-slider">
+    <div class="slide active" style="background-image: url('images/slide1.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="container slide-content">
+        <div class="slide-text">
+          <div class="eyebrow">Fresh Produce Across NY / NJ</div>
+          <h2>Premium Fruits & Vegetables For Businesses That Value Quality</h2>
+          <p>
+            Fresh, vibrant produce presented with the quality and professionalism your customers expect.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-light">Contact Us</a>
+            <a href="#products" class="btn btn-outline">View Products</a>
           </div>
         </div>
+      </div>
+    </div>
 
-        <div class="card glass-card">
-          <h4>Built to feel established</h4>
+    <div class="slide" style="background-image: url('images/slide2.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="container slide-content">
+        <div class="slide-text">
+          <div class="eyebrow">Freshness You Can See</div>
+          <h2>Crisp, Colorful Produce Delivered With Care</h2>
           <p>
-            Inspired by larger wholesale produce websites, this version gives
-            Malpino a stronger commercial presence while staying clean and easy to navigate.
+            Malpino Food Distributor helps businesses source produce that looks fresh, clean, and ready to serve.
           </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-light">Get In Touch</a>
+            <a href="#products" class="btn btn-outline">Our Services</a>
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class="slide" style="background-image: url('images/slide3.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="container slide-content">
+        <div class="slide-text">
+          <div class="eyebrow">Reliable Distribution</div>
+          <h2>Professional Produce Delivery You Can Count On</h2>
+          <p>
+            From warehouse to customer, we position your business with the trust and dependability of a true distributor.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-light">Call Today</a>
+            <a href="#service-area" class="btn btn-outline">Service Area</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('images/slide4.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="container slide-content">
+        <div class="slide-text">
+          <div class="eyebrow">Built For Wholesale Supply</div>
+          <h2>Supporting Restaurants, Markets, Retail & Food Service</h2>
+          <p>
+            A strong local produce partner for businesses throughout New York and New Jersey.
+          </p>
+          <div class="hero-buttons">
+            <a href="#products" class="btn btn-light">See Categories</a>
+            <a href="#contact" class="btn btn-outline">Request Info</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slide" style="background-image: url('images/slide5.jpeg');">
+      <div class="slide-overlay"></div>
+      <div class="container slide-content">
+        <div class="slide-text">
+          <div class="eyebrow">From Supplier To Table</div>
+          <h2>Helping Food Businesses Serve Quality At Every Step</h2>
+          <p>
+            Our presentation connects beautiful produce with the real-world businesses that depend on it.
+          </p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn btn-light">Work With Us</a>
+            <a href="#about" class="btn btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="slider-controls">
+      <button class="slider-btn" id="prevSlide" aria-label="Previous slide">&#10094;</button>
+      <button class="slider-btn" id="nextSlide" aria-label="Next slide">&#10095;</button>
+    </div>
+
+    <div class="slider-dots">
+      <button class="dot active" data-slide="0" aria-label="Go to slide 1"></button>
+      <button class="dot" data-slide="1" aria-label="Go to slide 2"></button>
+      <button class="dot" data-slide="2" aria-label="Go to slide 3"></button>
+      <button class="dot" data-slide="3" aria-label="Go to slide 4"></button>
+      <button class="dot" data-slide="4" aria-label="Go to slide 5"></button>
+    </div>
+  </section>
+
+  <section class="hero-intro">
+    <div class="container hero-intro-inner">
+      <div>
+        <p class="section-label">Malpino Food Distributor</p>
+        <h2>Fresh Produce. Dependable Service. Professional Distribution.</h2>
+      </div>
+      <p class="hero-intro-text">
+        Malpino Food Distributor supplies fresh fruits and vegetables to businesses across New York and New Jersey with a focus on quality, consistency, and responsive service.
+      </p>
     </div>
   </section>
 
@@ -222,7 +293,7 @@
 
         <div class="contact-item">
           <span>Instagram</span>
-          <a href="https://www.instagram.com/malpinodistributor/?hl=en" target="_blank">
+          <a href="https://www.instagram.com/malpinodistributor/?hl=en" target="_blank" rel="noopener noreferrer">
             @malpinodistributor
           </a>
         </div>
@@ -236,5 +307,66 @@
       <p>Fresh fruits and vegetables for the NY/NJ area.</p>
     </div>
   </footer>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const dots = document.querySelectorAll('.dot');
+    const prevBtn = document.getElementById('prevSlide');
+    const nextBtn = document.getElementById('nextSlide');
+
+    let currentSlide = 0;
+    let slideInterval;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+      });
+
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+
+      currentSlide = index;
+    }
+
+    function nextSlide() {
+      const nextIndex = (currentSlide + 1) % slides.length;
+      showSlide(nextIndex);
+    }
+
+    function prevSlide() {
+      const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
+      showSlide(prevIndex);
+    }
+
+    function startSlider() {
+      slideInterval = setInterval(nextSlide, 5000);
+    }
+
+    function resetSlider() {
+      clearInterval(slideInterval);
+      startSlider();
+    }
+
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      resetSlider();
+    });
+
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      resetSlider();
+    });
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        resetSlider();
+      });
+    });
+
+    showSlide(0);
+    startSlider();
+  </script>
 </body>
 </html>
