@@ -19,6 +19,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  font: inherit;
+}
+
 .container {
   width: min(1120px, 92%);
   margin: 0 auto;
@@ -70,51 +74,7 @@ a {
   color: #0b2f77;
 }
 
-/* Hero */
-.hero {
-  background: linear-gradient(135deg, #05265f 0%, #0b4fc2 55%, #2563eb 100%);
-  color: white;
-  padding: 90px 0 80px;
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 40px;
-  align-items: center;
-}
-
-.eyebrow {
-  display: inline-block;
-  padding: 8px 14px;
-  border: 1px solid rgba(255,255,255,0.25);
-  border-radius: 999px;
-  background: rgba(255,255,255,0.08);
-  font-size: 0.9rem;
-  margin-bottom: 20px;
-}
-
-.hero h2 {
-  font-size: 3.25rem;
-  line-height: 1.1;
-  font-weight: 800;
-  max-width: 700px;
-}
-
-.hero p {
-  margin-top: 22px;
-  font-size: 1.1rem;
-  color: #e0ecff;
-  max-width: 620px;
-}
-
-.hero-buttons {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
-
+/* Buttons */
 .btn {
   display: inline-block;
   padding: 14px 22px;
@@ -133,64 +93,169 @@ a {
 }
 
 .btn-outline {
-  border: 1px solid rgba(255,255,255,0.45);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   color: white;
 }
 
 .btn-outline:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
-.hero-cards {
-  display: grid;
-  gap: 18px;
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
-.card {
-  border-radius: 24px;
-  padding: 28px;
-}
-
-.white-card {
-  background: white;
-  color: #1f2937;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
-}
-
-.white-card h3 {
-  color: #2563eb;
-  text-transform: uppercase;
+/* Shared Eyebrow */
+.eyebrow {
+  display: inline-block;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
   font-size: 0.9rem;
-  letter-spacing: 2px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
 }
 
-.category-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
+/* Hero Slider */
+.hero-slider {
+  position: relative;
+  min-height: 82vh;
+  overflow: hidden;
+  background: #0b2f77;
 }
 
-.category-grid div {
-  background: #eff6ff;
-  color: #0b2f77;
-  padding: 14px;
-  border-radius: 16px;
-  font-weight: 700;
-  text-align: center;
+.slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1.2s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.glass-card {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.18);
+.slide.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slide-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to right, rgba(4, 18, 48, 0.78) 0%, rgba(4, 18, 48, 0.52) 38%, rgba(4, 18, 48, 0.30) 65%, rgba(4, 18, 48, 0.36) 100%);
+}
+
+.slide-content {
+  position: relative;
+  z-index: 2;
+  min-height: 82vh;
+  display: flex;
+  align-items: center;
+}
+
+.slide-text {
+  max-width: 720px;
   color: white;
+  padding: 80px 0 100px;
 }
 
-.glass-card h4 {
-  text-transform: uppercase;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
+.slide-text h2 {
+  font-size: 3.5rem;
+  line-height: 1.08;
+  font-weight: 800;
+  margin-bottom: 18px;
+  text-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.slide-text p {
+  font-size: 1.12rem;
+  color: #e0ecff;
+  max-width: 620px;
+  text-shadow: 0 8px 22px rgba(0, 0, 0, 0.2);
+}
+
+.slider-controls {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  z-index: 4;
+  display: flex;
+  gap: 10px;
+}
+
+.slider-btn {
+  width: 52px;
+  height: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: white;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  transition: 0.2s ease;
+  font-size: 1.15rem;
+}
+
+.slider-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.slider-dots {
+  position: absolute;
+  left: 50%;
+  bottom: 32px;
+  transform: translateX(-50%);
+  z-index: 4;
+  display: flex;
+  gap: 10px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.dot.active {
+  background: white;
+  transform: scale(1.18);
+}
+
+/* Intro section after slider */
+.hero-intro {
+  background: white;
+  padding: 48px 0 42px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.hero-intro-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.hero-intro h2 {
+  font-size: 2.7rem;
+  line-height: 1.12;
+  color: #0f172a;
+}
+
+.hero-intro-text {
+  font-size: 1.08rem;
+  color: #475569;
+  max-width: 720px;
 }
 
 /* Sections */
@@ -358,7 +423,7 @@ a {
   color: #1f2937;
   border-radius: 28px;
   padding: 30px;
-  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
 .contact-item {
@@ -408,7 +473,7 @@ a {
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .hero-grid,
+  .hero-intro-inner,
   .two-column,
   .service-area,
   .contact-grid,
@@ -420,8 +485,16 @@ a {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .hero h2 {
-    font-size: 2.6rem;
+  .slide-text h2 {
+    font-size: 2.7rem;
+  }
+
+  .slide-content {
+    min-height: 74vh;
+  }
+
+  .hero-slider {
+    min-height: 74vh;
   }
 }
 
@@ -430,27 +503,45 @@ a {
     gap: 14px;
   }
 
-  .hero {
-    padding: 70px 0 60px;
+  .slide-text {
+    padding: 70px 0 110px;
   }
 
-  .hero h2 {
-    font-size: 2.1rem;
+  .slide-text h2 {
+    font-size: 2.15rem;
+  }
+
+  .slide-text p {
+    font-size: 1rem;
   }
 
   .product-grid,
-  .category-grid,
   .serve-grid {
     grid-template-columns: 1fr;
   }
 
   .section h2,
-  .contact-section h2 {
+  .contact-section h2,
+  .hero-intro h2 {
     font-size: 2rem;
   }
 
   .header-inner {
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .slider-controls {
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .slider-btn {
+    width: 46px;
+    height: 46px;
+  }
+
+  .slider-dots {
+    bottom: 24px;
   }
 }
