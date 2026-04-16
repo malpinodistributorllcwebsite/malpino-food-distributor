@@ -655,14 +655,3 @@ img {
     bottom: 24px;
   }
 }
-/* LOGO HERO SLIDE */
-.hero-logo {
-  width: 340px;
-  max-width: 80%;
-  margin: 0 auto 20px auto;
-  display: block;
-}
-
-.brand-slide {
-  text-align: center;
-}
