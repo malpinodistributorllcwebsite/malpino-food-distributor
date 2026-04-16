@@ -75,24 +75,26 @@ img {
 }
 
 .logo {
-  height: 88px;
+  height: 120px;
   width: auto;
   object-fit: contain;
   display: block;
   flex-shrink: 0;
+  margin-top: -8px;
+  margin-bottom: -8px;
 }
 
 .brand-text h1 {
-  font-size: 1.85rem;
+  font-size: 1.6rem;
   color: var(--blue-900);
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 .brand-text p {
-  font-size: 0.78rem;
-  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--blue-700);
   margin-top: 6px;
@@ -206,11 +208,13 @@ img {
   position: absolute;
   inset: 0;
   background:
-    linear-gradient(to right,
+    linear-gradient(
+      to right,
       rgba(3, 15, 40, 0.78) 0%,
       rgba(3, 15, 40, 0.56) 34%,
       rgba(3, 15, 40, 0.28) 66%,
-      rgba(3, 15, 40, 0.34) 100%);
+      rgba(3, 15, 40, 0.34) 100%
+    );
 }
 
 .slide-content {
@@ -595,15 +599,17 @@ img {
   }
 
   .logo {
-    height: 70px;
+    height: 90px;
+    margin-top: -4px;
+    margin-bottom: -4px;
   }
 
   .brand-text h1 {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
   }
 
   .brand-text p {
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     letter-spacing: 0.14em;
   }
 
